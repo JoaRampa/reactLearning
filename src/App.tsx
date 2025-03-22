@@ -1,6 +1,7 @@
 import './App.css'
 import { useState } from 'react';
 import { Button, Button2, ColorRed } from './components'
+import CustomForm from './components/CustomForm/CustomForm';
 //import { useFetch } from './hooks';
 
 //const url = 'https://jsonplaceholder.typicode.com/posts';
@@ -26,6 +27,7 @@ function App() {
       <Button2 parentMethod={handleClick}> 
         <ColorRed><div>my label</div></ColorRed>
       </Button2>
+      <CustomForm />
     </>
   )
 }
