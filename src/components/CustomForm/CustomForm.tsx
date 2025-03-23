@@ -3,7 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form"
 import InputForm from "./components/CustomInput"
 import { FormValues, schema } from "./models"
  
-const CustomForm = () => {
+export const CustomForm = () => {
   //viene de reactHookForm, useform devuelve metodos
   const {control, handleSubmit, formState: {errors}} = useForm<FormValues>({ //usa de tipo formValues
     resolver: zodResolver(schema),
@@ -28,5 +28,3 @@ const CustomForm = () => {
     </form>
   )
 }
-
-export default CustomForm;

@@ -1,7 +1,8 @@
 import './App.css'
 import { useState } from 'react';
-import { Button, Button2, ColorRed } from './components'
-import CustomForm from './components/CustomForm/CustomForm';
+import { CustomForm, Button, Button2, ColorRed } from './components'
+import { GlobalProvider } from './context/global.context';
+//import CustomForm from './components/CustomForm/CustomForm';
 //import { useFetch } from './hooks';
 
 //const url = 'https://jsonplaceholder.typicode.com/posts';
@@ -22,13 +23,13 @@ function App() {
   const handleClick = () => console.log("click")
 
   return (
-    <>
+    <GlobalProvider>
       <Button label={`Count is ${count}`} parentMethod={countMore}/>
       <Button2 parentMethod={handleClick}> 
         <ColorRed><div>my label</div></ColorRed>
       </Button2>
       <CustomForm />
-    </>
+    </GlobalProvider>
   )
 }
 
